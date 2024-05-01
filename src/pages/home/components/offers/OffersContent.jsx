@@ -38,7 +38,7 @@ function OffersContent() {
         return String(a).padStart('2', '0')
     }
 
-    setInterval(() => generateTime('03/27/2024'), 1000)
+    setInterval(() => generateTime('04/4/2024'), 1000)
     return (
         <>
             {
