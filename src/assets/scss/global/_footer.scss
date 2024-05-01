@@ -1,0 +1,130 @@
+.footer {
+  border: 1px solid $gray-300;
+  padding: 40px 0 0 0;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &-logo {
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: $gray-600;
+    }
+
+    &__links {
+      display: flex;
+      gap: 11px;
+    }
+  }
+
+  &-main {
+    display: flex;
+    gap: 64px;
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 137%;
+      color: $dark;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: $gray-500;
+    }
+  }
+
+  &-apps {
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 137%;
+      color: $dark;
+      margin-bottom: 15px;
+    }
+
+    &__store,
+    &__google {
+      @include center();
+      border-radius: 6px;
+      width: 124px;
+      height: 42px;
+      background: $dark;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      @include hover() {
+        &:hover {
+          background: $gray-600;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid $gray-300;
+    background: $gray-200;
+    &__row {
+      @include flex(center, space-between);
+      padding: 23px 0;
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #606060;
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: #606060;
+    }
+
+    &__content {
+      @include center();
+      gap: 8px;
+
+      &__btn {
+        padding: 10px;
+      }
+    }
+  }
+  &-logo {
+    &__icon {
+      svg {
+        &:hover path {
+          fill: #007aff;
+        }
+      }
+    }
+  }
+}

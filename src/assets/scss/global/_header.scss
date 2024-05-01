@@ -1,0 +1,94 @@
+.header {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+
+  &-row {
+    @include flex(center, space-between);
+  }
+
+  &-search {
+    border: 2px solid $primary;
+    border-radius: 6px;
+    width: 520px;
+    height: 40px;
+    overflow: hidden;
+
+    @include flex(center, unset);
+
+    &__input {
+      flex: 1 1 auto;
+      height: 100%;
+      padding: 0 10px;
+      border: none;
+      font-weight: 400;
+      font-size: 16px;
+      color: $dark;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray-500;
+      }
+    }
+
+    &__button {
+      width: 100px;
+      height: 100%;
+      background-color: $primary;
+      border-left: 2px solid $primary;
+      @include center();
+      font-weight: 500;
+      font-size: 16px;
+      color: $white;
+      @include trn();
+
+
+
+      @include hover() {
+        &:hover {
+          background-color: transparent;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+
+
+  &-button {
+    @include flex(center);
+    flex-direction: column;
+    row-gap: 6px;
+
+    &s {
+      @include flex(center);
+      column-gap: 24px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 12px;
+      @include trn();
+    }
+
+    path {
+      @include trn();
+
+    }
+
+    @include hover() {
+      &:hover {
+        span {
+          color: $primary;
+        }
+
+        path {
+          fill: $primary;
+        }
+      }
+
+
+    }
+  }
+}

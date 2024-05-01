@@ -1,0 +1,132 @@
+.categories-page {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    margin: 24px 0;
+  }
+
+  &__top {
+    @include flex(center, space-between);
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+    padding: 22px 19px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__forms {
+    @include flex(center, unset);
+    gap: 8px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+    margin-right: 30px;
+  }
+
+  &__checkbox {
+    margin: 0 6px 0 0;
+  }
+
+  &__select {
+    width: 172px;
+    padding: 11px 9px;
+    border-radius: 6px;
+    border: 1px solid $gray-300;
+  }
+
+  &__option {
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark;
+  }
+
+  &__input {
+    padding: 11px 9px;
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+    margin-right: 3px;
+  }
+
+  &__btn {
+    border: 1px solid $gray-300;
+    border-radius: 6px;
+    padding: 4px;
+    @include trn();
+
+    &:not(:last-child) {
+      margin-left: 10px;
+    }
+
+    &.active {
+      background-color: $gray-300;
+    }
+
+    &.active {
+      background-color: $gray-300;
+    }
+  }
+
+  &__bottom {
+    @include flex(center, end);
+    gap: 10px;
+
+    &-row {
+      display: flex;
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    border: 1px solid $gray-300;
+    padding: 4px 7px;
+  }
+
+  &__number {
+    border: 1px solid $gray-300;
+    padding: 9px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $dark;
+
+    &.extra {
+      color: $gray-500;
+      background-color: $gray-300;
+    }
+  }
+}
+
+.categories-filter {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  &__button {
+    @include flex(center, unset);
+    column-gap: 8px;
+    padding: 5px 10px;
+    border: 1px solid $primary;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $gray-600;
+
+    span:has(svg) {
+      height: 20px;
+    }
+  }
+}

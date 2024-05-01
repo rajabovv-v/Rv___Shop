@@ -1,0 +1,42 @@
+.tab-menu {
+  margin: 24px 0;
+  &__wrapper {
+    border-radius: 6px;
+    border: 1px solid $gray-300;
+    box-shadow: 0 1px 3px 0 rgba(56, 56, 56, 0.1);
+    background-color: $white;
+  }
+
+  &__top {
+    display: flex;
+    border-bottom: 1px solid $gray-300;
+    padding: 0 20px;
+    gap: 12px;
+  }
+
+  &__link {
+    @include center();
+    width: 103px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $gray-500;
+    padding-top: 6px;
+
+    &.active {
+      border-bottom: 2px solid $primary;
+      color: $primary;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: $gray-600;
+  }
+}

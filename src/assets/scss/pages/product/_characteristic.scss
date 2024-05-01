@@ -1,0 +1,26 @@
+.characteristic{
+    width: 100%;
+
+    &-list{
+        &__item{
+            width: 100%;
+            @include flex(center, space-between);
+            padding: 12px;
+            border-radius: 4px;
+
+            span{
+                font-size: 16px;
+                color: #858997;
+            }
+
+            &:nth-child(odd){
+                background-color: rgba(0,0,0,.05);
+            }
+            
+        }
+    }
+
+    &-value{
+        color: $primary !important;
+    }
+}

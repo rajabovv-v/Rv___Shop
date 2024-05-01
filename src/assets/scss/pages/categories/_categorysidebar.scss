@@ -1,0 +1,181 @@
+.categories-page.category-sidebar {
+    padding: 0 20px;
+    margin: 24px 28px 24px 0;
+
+    .category-sidebar {
+        &__top {
+            border-top: 1px solid $gray-300;
+            padding: 14px 0;
+        }
+
+        &__head {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__row {
+            @include flex(center, space-between);
+            padding: 14px 0;
+            margin-bottom: 10px;
+        }
+
+
+        &__title {
+            font-weight: 600;
+            font-size: 16px;
+            color: $dark;
+        }
+
+        &__subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            color: $gray-600;
+            padding: 2px 0;
+        }
+
+        &__link {
+            font-weight: 400;
+            font-size: 16px;
+            color: $primary;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid $gray-300;
+            margin: 16px 0;
+
+            &__title {
+                font-weight: 600;
+                font-size: 16px;
+                color: $dark;
+            }
+
+            &-row {
+                @include flex(center, unset);
+                padding: 5px 0;
+                margin-bottom: 10px;
+            }
+
+            &__input {
+                margin: 0 6px 0 0;
+                border: 2px solid #bdbdbd;
+                border-radius: 5px;
+                width: 20px;
+                height: 20px;
+            }
+
+            &__label {
+                font-weight: 400;
+                font-size: 16px;
+                color: $dark;
+            }
+        }
+
+        &__range {
+            border-top: 1px solid $gray-300;
+            margin-bottom: 20px;
+
+            &__input {
+                border-radius: 2px;
+                width: 230px;
+                height: 4px;
+                position: absolute;
+                z-index: 0;
+            }
+
+            &__row {
+                @include flex(center, unset);
+                gap: 9px;
+                margin-top: 20px;
+            }
+
+            &__min,
+            &__max {
+                display: inline-block;
+                font-weight: 400;
+                font-size: 16px;
+                color: $dark;
+            }
+
+            &__counter {
+                display: inline-block;
+                border: 1px solid $gray-300;
+                border-radius: 6px;
+                width: 111px;
+                padding: 11px 10px;
+            }
+
+            &__btn {
+                border: 1px solid $gray-300;
+                border-radius: 6px;
+                padding: 0px 16px;
+                width: 228px;
+                height: 40px;
+                font-weight: 500;
+                font-size: 16px;
+                color: $primary;
+                margin-top: 8px;
+            }
+        }
+
+        &__radio {
+            border-top: 1px solid $gray-300;
+            margin-bottom: 20px;
+
+            &__row {
+                display: flex;
+                align-items: center;
+                padding: 6px 0;
+                gap: 10px;
+            }
+
+            &__input {
+                width: 34px;
+                height: 24px;
+            }
+
+            &__label {
+                font-weight: 400;
+                font-size: 16px;
+                color: $dark;
+            }
+        }
+
+        &__rating {
+            &__row {
+                display: flex;
+                align-items: center;
+            }
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            &__check {
+                width: 34px;
+                height: 24px;
+                border: 2px solid #bdbdbd;
+                border-radius: 5px;
+            }
+
+            &__label {
+                &:not(:last-child) {
+                    path {
+                        fill: gold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category-all__button {
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    color: $primary;
+}

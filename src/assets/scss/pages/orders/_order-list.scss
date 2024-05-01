@@ -1,0 +1,53 @@
+.order{
+    
+    &-list {
+        border: 1px solid $gray-300;
+        border-radius: 6px;
+        flex: 1 1 auto;
+        padding: 24px 20px;
+        background-color: $white;
+    }
+
+    &-bottom{
+        width: 100%;
+        padding: 20px 20px 0 20px;
+        @include flex(center, space-between);
+
+        &__back{
+            color: $white;
+            border: 1px solid $primary;
+            border-radius: 6px;
+            padding: 10px 12px;
+            background-color: $primary;
+            @include center();
+            column-gap: 6px;
+            @include trn();
+
+            @include hover(){
+                &:hover, path{
+                    fill: $primary;
+                    color: $primary;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        &__remove{
+            color: $primary;
+            border: 1px solid $primary;
+            border-radius: 6px;
+            padding: 10px 12px;
+            background-color: $white;
+            @include center();
+            column-gap: 6px;
+            @include trn();
+
+            @include hover(){
+                &:hover, path{
+                    color: $white;
+                    background-color: $primary  ;
+                }
+            }
+        }
+    }
+}

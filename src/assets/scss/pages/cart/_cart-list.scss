@@ -1,0 +1,48 @@
+.cart-list {
+    &-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+      &-btn1 {
+        width: 159px;
+        height: 40px;
+        padding: 9px 14px 9px 9px;
+        border-radius: 6px;
+        background-color: $primary;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.36px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border: 1px solid $primary;
+        &:hover {
+          background-color: #fff;
+          color: $primary;
+        }
+        &:hover path {
+          fill: $primary;
+        }
+      }
+      &-btn2 {
+        width: 120px;
+        height: 40px;
+        gap: 10px;
+        border-radius: 6px;
+        border: 1px solid $primary;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.36px;
+        text-align: center;
+        color: $primary;
+    
+        &:hover {
+          background-color: $primary;
+          color: #fff;
+        }
+      }
+}

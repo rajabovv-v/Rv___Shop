@@ -1,0 +1,190 @@
+.checkout {
+
+  &-list {
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid $gray-300;
+    background-color: $white;
+    box-shadow: 0 4px 10px 0 rgba(56, 56, 56, 0.1);
+
+
+    &__name {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 89%;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid $gray-400;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }
+    }
+
+    &__location {
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    &__phone {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      input {
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid $gray-400;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }
+    }
+
+    &__address {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      input {
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid $gray-400;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }
+    }
+
+    &__radio {
+      margin-top: 16px;
+      @include flex(unset);
+      gap: 20px;
+
+      &__cash {
+        font-size: 16px;
+        @include flex(center);
+        gap: 5px;
+
+        input {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &__card {
+        font-size: 16px;
+        @include flex(center);
+        gap: 5px;
+
+        input {
+          width: 16px;
+          height: 16px;
+        }
+
+
+      }
+    }
+
+    &__card {
+      display: flex;
+      gap: 20px;
+      margin-top: 14px;
+
+      &__num {
+        width: 100%;
+      }
+
+      label {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        margin-top: 8px;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid $gray-400;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }
+    }
+
+    &__buttons {
+      margin-top: 20px;
+      @include flex(center, space-between);
+    }
+
+    &__button {
+      color: $primary;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 1px solid $primary;
+      @include trn();
+
+      @include hover() {
+        &:hover {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+
+    &__pay {
+      color: $white;
+      font-size: 16px;
+      border-radius: 6px;
+      padding: 10px 26px;
+      border: 1px solid $primary;
+      background-color: $primary;
+      @include trn();
+
+      @include hover() {
+        color: $primary;
+        background-color: $white;
+      }
+
+    //  &:disabled{
+    //     border: 1px solid $gray-300;
+    //     color: $gray-300;
+    //     cursor: not-allowed;
+    //    }
+    }
+  }
+}

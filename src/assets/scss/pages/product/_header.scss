@@ -1,0 +1,225 @@
+.product-header {
+    margin-top: 20px;
+
+    &__wrapper {
+        border: 1px solid $gray-300;
+        border-radius: 6px;
+        background-color: $white;
+        padding: 20px;
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__content {
+        max-width: 430px;
+    }
+
+
+    .image {
+        &-wrapper {
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        &-main {
+            width: 100%;
+            height: 380px;
+            border: 1px solid $gray-300;
+            border-radius: 6px;
+            overflow: hidden;
+            padding: 16px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-list {
+            display: flex;
+            column-gap: 8px;
+
+            &__item {
+                width: 56px;
+                height: 56px;
+                border: 1px solid $gray-300;
+                border-radius: 4px;
+                padding: 4px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                &_active{
+                    border: 1px solid $primary;
+                }
+            }
+        }
+    }
+
+    .content {
+        &-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+            color: $dark;
+            margin-bottom: 8px;
+        }
+
+        &-row {
+            display: flex;
+            margin-bottom: 14px;
+
+            &__text {
+                font-weight: 400;
+                font-size: 16px;
+                color: #787a80;
+            }
+
+            &__icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            &__col {
+                position: relative;
+
+                &:not(:last-child) {
+                    padding-right: 20px;
+                    margin-right: 12px;
+
+                    &::after {
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: #dbdbdb;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        border-radius: 50%;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+
+        }
+
+        &-star {
+            &:not(:last-child) {
+                path {
+                    fill: $orange;
+                }
+            }
+
+            &s {
+                &__title {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $orange;
+                }
+            }
+        }
+
+        &-stars,
+        &-row__col {
+            @include flex(center, unset);
+            column-gap: 8px;
+        }
+
+        &-price {
+            margin-bottom: 8px;
+
+            &__old {
+                font-size: 14px;
+                line-height: 20px;
+                text-decoration-line: line-through;
+                color: #ffbc59;
+            }
+
+            &__new {
+                font-size: 24px;
+                line-height: 30px;
+                color: $orange;
+                font-weight: bold;
+            }
+        }
+
+        &-list {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            margin-bottom: 14px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            max-width: 70%;
+
+            &__item {
+                display: flex;
+                column-gap: 4px;
+
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+
+            &__line {
+                flex: 1 1 auto;
+                border-bottom: 2px dotted $gray-300;
+            }
+
+            &__text {
+                font-size: 16px;
+                line-height: 110%;
+                color: $dark;
+            }
+        }
+
+        &-button {
+            border-radius: 6px;
+            padding: 0px 16px;
+            width: 248px;
+            height: 40px;
+            padding: 10px;
+
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+
+            &__primary {
+                background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
+                color: $white;
+
+                &:hover {
+                    border: 1px solid $gray-300;
+                    color: $primary;
+                    background: transparent;
+                }
+            }
+
+            &__secondary {
+                border: 1px solid $gray-300;
+                color: $primary;
+
+                &:hover {
+                    background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
+                    color: $white;
+                }
+            }
+
+            &s {
+                display: flex;
+                column-gap: 8px;
+            }
+
+
+        }
+
+
+
+    }
+}

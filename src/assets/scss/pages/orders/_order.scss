@@ -1,0 +1,21 @@
+.order {
+    &-page {
+        padding-top: 24px;
+        margin-bottom: 24px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 133%;
+            letter-spacing: -0.01em;
+            color: $dark;
+        }
+
+        &__row{
+            margin-top: 24px;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 20px;
+        }
+    }
+}
