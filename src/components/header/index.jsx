@@ -60,14 +60,12 @@ function Header() {
                     <span className="header-button__text">{isAuth ? 'Profile' : 'Register'}</span>
                   </button>
 
-              <Link to={"/orders"}>
                 <button className="header-button">
                   <span className="header-button__icon">
                     <HeartIcon />
                   </span>
                   <span className="header-button__text">Orders</span>
                 </button>
-              </Link>
               <Link to="/cart">
                 <button className="header-button">
                   <span className="header-button__icon">
